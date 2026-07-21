@@ -1403,7 +1403,7 @@
       <div class="projects-grid">
 
         <!-- FINANZILLO -->
-        <div class="project-card" data-category="software">
+        <div class="project-card" data-category="software ia">
           <div class="project-header">
             <span class="project-icon">💶</span>
             <div class="project-links">
@@ -1415,10 +1415,8 @@
           <p class="project-name">FinanZillo</p>
           <p class="project-date">Julio 2026</p>
           <p class="project-desc">
-            App autoalojada de control de gastos, presupuestos e inversiones con precios en vivo.
-            Backend Node.js + Express sobre el SQLite nativo de Node, sin nube: los datos viven en
-            un único archivo local. Se instala como PWA en el móvil y sigue funcionando sin conexión,
-            sincronizando los movimientos al recuperar el servidor.
+            App autoalojada de finanzas personales: gastos, presupuestos e inversiones con precios
+            en vivo. Node.js + Express sobre SQLite local, instalable como PWA y operativa sin conexión.
           </p>
           <div class="project-tags">
             <span class="project-tag">Node.js</span>
@@ -1436,7 +1434,7 @@
         </div>
 
         <!-- MONTECARLA -->
-        <div class="project-card" data-category="software">
+        <div class="project-card" data-category="software hardware">
           <div class="project-header">
             <span class="project-icon">📡</span>
             <div class="project-links">
@@ -1842,7 +1840,9 @@
         btn.classList.add('active');
         const filter = btn.dataset.filter;
         cards.forEach((card, i) => {
-          const match = (filter === 'all' || card.dataset.category === filter);
+          // data-category admite varias categorías separadas por espacios
+          const cats = (card.dataset.category || '').split(/\s+/);
+          const match = (filter === 'all' || cats.includes(filter));
           if (match) {
             card.removeAttribute('data-hidden');
             card.style.animation = 'none';
