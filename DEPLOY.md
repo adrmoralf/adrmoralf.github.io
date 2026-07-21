@@ -50,7 +50,7 @@ GitHub Pages se actualiza automáticamente en ~30 segundos.
 ```
 TU_USUARIO.github.io/
 ├── index.html          ← página principal (no renombrar)
-├── Mi curriculum.pdf   ← CV descargable (ya enlazado)
+├── CV.pdf              ← CV descargable (ya enlazado)
 └── DEPLOY.md           ← esta guía (puedes borrarla del repo)
 ```
 

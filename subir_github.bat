@@ -3,7 +3,7 @@ cd /d "A:\Repositorios\AdriWeb"
 echo Configurando repositorio git...
 git init
 git checkout -b main 2>nul || git checkout main
-git add index.html foto.jpg "Mi curriculum.pdf"
+git add index.html foto.jpg CV.pdf
 git commit -m "Initial portfolio"
 git remote remove origin 2>nul
 git remote add origin https://github.com/adrmoralf/adrmoralf.github.io.git

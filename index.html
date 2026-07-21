@@ -949,6 +949,29 @@
 
     /* ── Project ID badge: removido ── */
 
+    /* ── Project status badge (proyectos en curso) ── */
+    .project-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+      padding: 2px 8px;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .project-status .ps-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 4px var(--green);
+      animation: statusPulse 2s ease-in-out infinite;
+    }
+
     /* ── Footer schematic ASCII ── */
     .footer-schematic {
       font-family: 'JetBrains Mono', monospace;
@@ -1237,11 +1260,11 @@
             <span class="hero-meta-item"><span class="status-dot"></span><span class="status-label">STATUS:</span>AVAILABLE</span>
             <span class="hero-meta-item">📍 Sevilla, España</span>
             <span class="hero-meta-item">🎓 Universidad de Sevilla</span>
-            <span class="hero-meta-item">🚗 Carnet B y A2</span>
+            <span class="hero-meta-item">🚗 Carnet B y A2 · Vehículo propio</span>
           </div>
           <div class="hero-actions">
             <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
-            <a href="Mi curriculum.pdf" class="btn btn-outline" download>↓ Descargar CV</a>
+            <a href="CV.pdf" class="btn btn-outline" download>↓ Descargar CV</a>
           </div>
           <div class="social-row">
             <a href="https://github.com/adrmoralf" class="social-link" target="_blank" rel="noopener">
@@ -1297,9 +1320,9 @@
             e inteligencia artificial.
           </p>
           <p>
-            Fuera del trabajo académico y profesional, disfruto construyendo proyectos propios que
-            combinan firmware, hardware y software — desde cubos de Rubik virtuales hasta cascos de
-            Iron Man con control por voz.
+            Disfruto construyendo proyectos propios que
+            combinan firmware, hardware y software — desde paquetes ROS 2 de localización con fusión
+            WiFi–LiDAR hasta cascos de Iron Man con control por voz.
           </p>
 
           <div class="extras-row">
@@ -1347,6 +1370,7 @@
               <span class="tag">Sistemas de percepción</span>
               <span class="tag">Edición de vídeo</span>
               <span class="tag">Análisis de control</span>
+              <span class="tag">Resolución de problemas</span>
             </div>
           </div>
           <div>
@@ -1361,6 +1385,7 @@
               <span class="tag">N8N</span>
               <span class="tag">Xilinx</span>
               <span class="tag">Arena Rockwell</span>
+              <span class="tag">EcoStruxure</span>
               <span class="tag">Eagle</span>
             </div>
           </div>
@@ -1397,6 +1422,28 @@
       </div>
 
       <div class="projects-grid">
+
+        <!-- MONTECARLA -->
+        <div class="project-card" data-category="software">
+          <div class="project-header">
+            <span class="project-icon">📡</span>
+            <span class="project-status"><span class="ps-dot"></span>EN DESARROLLO</span>
+          </div>
+          <p class="project-name">Montecarla</p>
+          <p class="project-date">Noviembre 2025 — Junio 2026</p>
+          <p class="project-desc">
+            Paquete ROS 2 que mejora la localización de robots en interiores fusionando la señal
+            WiFi con LiDAR. Combina ambas fuentes para corregir la estimación de pose donde la
+            geometría del entorno resulta ambigua.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">ROS 2</span>
+            <span class="project-tag">LiDAR</span>
+            <span class="project-tag">WiFi</span>
+            <span class="project-tag">Localización</span>
+            <span class="project-tag">Python</span>
+          </div>
+        </div>
 
         <!-- CUBO ADRIK -->
         <div class="project-card" data-category="embedded">
@@ -1510,7 +1557,7 @@
         <div class="timeline-item">
           <p class="timeline-date">Noviembre 2025 — Mayo 2026</p>
           <p class="timeline-role">Técnico de Estudios Técnicos</p>
-          <p class="timeline-company">ECOINTEGRAL INGENIERÍA, SL</p>
+          <p class="timeline-company">ECOINTEGRAL INGENIERÍA, SL · Málaga</p>
           <p class="timeline-desc">
             Ingeniería de Transporte y Distribución Eléctrica. Elaboración y análisis de estudios
             técnicos para proyectos de infraestructura eléctrica.
@@ -1521,7 +1568,7 @@
         <div class="timeline-item">
           <p class="timeline-date">Mayo 2024</p>
           <p class="timeline-role">Técnico de Divulgación — Ingeniería y Realidad Aumentada</p>
-          <p class="timeline-company">B2V Arquitectura</p>
+          <p class="timeline-company">B2V Arquitectura · Sevilla</p>
           <p class="timeline-desc">
             Presentación de trabajos de ingeniería en stand. Divulgación de proyectos técnicos
             y aplicaciones de realidad aumentada al público profesional.
